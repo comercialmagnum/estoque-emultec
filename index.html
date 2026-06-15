@@ -181,6 +181,13 @@ function render() {
   if (hideZero) {
     data = showAll ? data.filter(d=>(d.rs+d.sc+d.sp+d.pr)>0) : data.filter(d=>d[selEst]>0);
   }
+    data.sort((a,b) => {
+          if (a.f !== b.f) return a.f.localeCompare(b.f);
+          const na = parseFloat((a.d.match(/(\d+[\.,]?\d*)\s*(cm|C|mm)?/i)||[])[1]) || 0;
+          const nb = parseFloat((b.d.match(/(\d+[\.,]?\d*)\s*(cm|C|mm)?/i)||[])[1]) || 0;
+          if (na !== nb) return na - nb;
+          return a.d.localeCompare(b.d);
+    });
 
   // Summary cards
   const totByState = {rs:0,sc:0,sp:0,pr:0};
