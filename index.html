@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Estoque Emultec por Estado â 01/10/2026</title>
+<title>Estoque Emultec por Estado â 02/10/2026</title>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f6f8; color: #1a1a1a; padding: 24px; }
@@ -58,7 +58,7 @@ tfoot td.num { text-align: right; }
 
 <div id="app">
 <h1>RelatÃ³rio de Estoque por Estado</h1>
-<p class="subtitle">Fonte: bi.emultec.com.br â estoque_analÃ­tico (Locais) â 01/10/2026</p>
+<p class="subtitle">Fonte: bi.emultec.com.br â estoque_analÃ­tico (Locais) â 02/10/2026</p>
 
 
 <p class="section-label">Estado</p>
@@ -87,12 +87,12 @@ tfoot td.num { text-align: right; }
 const allData = [
   {f:"ANASTOMAT",cod:"ZSR-DCA-12C",d:"CircuncisÃ£o 12C",rs:1,sc:0,sp:0,pr:1,ba:0},
   {f:"ANASTOMAT",cod:"ZSR-DCA-14C",d:"CircuncisÃ£o 14C",rs:3,sc:1,sp:1,pr:0,ba:0},
-  {f:"ANASTOMAT",cod:"ZSR-DCA-16C",d:"CircuncisÃ£o 16C",rs:3,sc:1,sp:2,pr:2,ba:0},
-  {f:"ANASTOMAT",cod:"ZSR-DCA-18C",d:"CircuncisÃ£o 18C",rs:5,sc:4,sp:2,pr:4,ba:1},
-  {f:"ANASTOMAT",cod:"ZSR-DCA-22C",d:"CircuncisÃ£o 22C",rs:7,sc:12,sp:6,pr:6,ba:1},
-  {f:"ANASTOMAT",cod:"ZSR-DCA-26C",d:"CircuncisÃ£o 26C",rs:6,sc:17,sp:4,pr:5,ba:5},
-  {f:"ANASTOMAT",cod:"ZSR-DCA-30C",d:"CircuncisÃ£o 30C",rs:4,sc:12,sp:4,pr:7,ba:2},
-  {f:"ANASTOMAT",cod:"ZSR-DCA-34C",d:"CircuncisÃ£o 34C",rs:6,sc:11,sp:6,pr:8,ba:2},
+  {f:"ANASTOMAT",cod:"ZSR-DCA-16C",d:"CircuncisÃ£o 16C",rs:3,sc:1,sp:2,pr:1,ba:0},
+  {f:"ANASTOMAT",cod:"ZSR-DCA-18C",d:"CircuncisÃ£o 18C",rs:5,sc:4,sp:1,pr:3,ba:1},
+  {f:"ANASTOMAT",cod:"ZSR-DCA-22C",d:"CircuncisÃ£o 22C",rs:7,sc:12,sp:5,pr:6,ba:1},
+  {f:"ANASTOMAT",cod:"ZSR-DCA-26C",d:"CircuncisÃ£o 26C",rs:6,sc:17,sp:3,pr:5,ba:5},
+  {f:"ANASTOMAT",cod:"ZSR-DCA-30C",d:"CircuncisÃ£o 30C",rs:4,sc:12,sp:3,pr:7,ba:2},
+  {f:"ANASTOMAT",cod:"ZSR-DCA-34C",d:"CircuncisÃ£o 34C",rs:6,sc:11,sp:5,pr:8,ba:2},
   {f:"CALIBER",cod:"VCB-10X8",d:"Membrana Reconstrutora",rs:8,sc:0,sp:4,pr:3,ba:2},
   {f:"ELEFANT",cod:"ASP165",d:"CÃ¢nula IrrigaÃ§Ã£o 35cm",rs:4,sc:2,sp:0,pr:3,ba:0},
   {f:"ELEFANT",cod:"ASP185",d:"CÃ¢nula IrrigaÃ§Ã£o 45cm",rs:281,sc:17,sp:83,pr:15,ba:5},
@@ -108,12 +108,12 @@ const allData = [
   {f:"INTRUM. TITAN",cod:"KITINSTRTITAN",d:"Kit Instrumentos Titan",rs:3,sc:1,sp:0,pr:1,ba:0},
   {f:"INTRUM. TITAN",cod:"QB55552",d:"Furlow Inserter",rs:5,sc:2,sp:0,pr:0,ba:2},
   {f:"INTRUM. TITAN",cod:"QB5558",d:"Kit Dilatadores Rossello",rs:0,sc:2,sp:0,pr:1,ba:1},
-  {f:"KIT DE MONTAGEM",cod:"519150",d:"Kit Montagem s/ Extensor",rs:21,sc:1,sp:2,pr:1,ba:0},
+  {f:"KIT DE MONTAGEM",cod:"519150",d:"Kit Montagem s/ Extensor",rs:21,sc:0,sp:2,pr:1,ba:0},
   {f:"KIT DE MONTAGEM",cod:"519170",d:"Kit Montagem Titan",rs:0,sc:0,sp:1,pr:1,ba:0},
-  {f:"KIT DE MONTAGEM",cod:"519310",d:"Extensor PrÃ³tese Titan 0,5",rs:4,sc:1,sp:2,pr:1,ba:0},
-  {f:"MALEAVEL",cod:"519250",d:"Implante MaleÃ¡vel Genesis 9,5mm",rs:15,sc:2,sp:3,pr:7,ba:2},
-  {f:"MALEAVEL",cod:"519260",d:"Implante MaleÃ¡vel Genesis 11mm",rs:16,sc:1,sp:3,pr:7,ba:2},
-  {f:"MALEAVEL",cod:"519270",d:"Implante MaleÃ¡vel Genesis 13mm",rs:14,sc:2,sp:3,pr:7,ba:2},
+  {f:"KIT DE MONTAGEM",cod:"519310",d:"Extensor PrÃ³tese Titan 0,5",rs:4,sc:0,sp:2,pr:1,ba:0},
+  {f:"MALEAVEL",cod:"519250",d:"Implante MaleÃ¡vel Genesis 9,5mm",rs:14,sc:3,sp:3,pr:7,ba:2},
+  {f:"MALEAVEL",cod:"519260",d:"Implante MaleÃ¡vel Genesis 11mm",rs:15,sc:1,sp:3,pr:7,ba:2},
+  {f:"MALEAVEL",cod:"519270",d:"Implante MaleÃ¡vel Genesis 13mm",rs:13,sc:3,sp:3,pr:7,ba:2},
   {f:"NARROW INFRA",cod:"519300",d:"Narrow Kit Montagem Titan",rs:2,sc:0,sp:0,pr:0,ba:0},
   {f:"NARROW INFRA",cod:"EN2814",d:"PrÃ³tese NB Infra 14cm",rs:1,sc:0,sp:0,pr:0,ba:0},
   {f:"NARROW INFRA",cod:"EN2816",d:"PrÃ³tese NB Infra 16cm",rs:1,sc:0,sp:0,pr:0,ba:0},
@@ -122,13 +122,13 @@ const allData = [
   {f:"NARROW PENO",cod:"EN2916",d:"PrÃ³tese NB Escr 16cm",rs:0,sc:0,sp:0,pr:0,ba:0},
   {f:"NARROW PENO",cod:"EN2918",d:"PrÃ³tese NB Escr 18cm",rs:0,sc:0,sp:0,pr:0,ba:0},
   {f:"PENO",cod:"E17924",d:"PrÃ³tese Titan Escrotal 24cm",rs:1,sc:0,sp:0,pr:1,ba:0},
-  {f:"PENO",cod:"ES2914",d:"PrÃ³tese Titan Escrotal 14cm",rs:1,sc:1,sp:2,pr:1,ba:0},
-  {f:"PENO",cod:"ES2916",d:"PrÃ³tese Titan Escrotal 16cm",rs:3,sc:1,sp:2,pr:2,ba:0},
-  {f:"PENO",cod:"ES2918",d:"PrÃ³tese Titan Escrotal 18cm",rs:7,sc:1,sp:2,pr:1,ba:0},
-  {f:"PENO",cod:"ES2920",d:"PrÃ³tese Titan Escrotal 20cm",rs:1,sc:1,sp:2,pr:1,ba:0},
-  {f:"PENO",cod:"ES2922",d:"PrÃ³tese Titan Escrotal 22cm",rs:2,sc:1,sp:1,pr:1,ba:0},
-  {f:"RESERVATORIO",cod:"ER8075",d:"ReservatÃ³rio OTR 75cc",rs:7,sc:1,sp:2,pr:3,ba:0},
-  {f:"RESERVATORIO",cod:"ER8125",d:"ReservatÃ³rio OTR 125cc",rs:15,sc:1,sp:2,pr:3,ba:0},
+  {f:"PENO",cod:"ES2914",d:"PrÃ³tese Titan Escrotal 14cm",rs:1,sc:0,sp:2,pr:1,ba:0},
+  {f:"PENO",cod:"ES2916",d:"PrÃ³tese Titan Escrotal 16cm",rs:3,sc:0,sp:2,pr:2,ba:0},
+  {f:"PENO",cod:"ES2918",d:"PrÃ³tese Titan Escrotal 18cm",rs:7,sc:0,sp:2,pr:1,ba:0},
+  {f:"PENO",cod:"ES2920",d:"PrÃ³tese Titan Escrotal 20cm",rs:1,sc:0,sp:2,pr:1,ba:0},
+  {f:"PENO",cod:"ES2922",d:"PrÃ³tese Titan Escrotal 22cm",rs:2,sc:0,sp:1,pr:1,ba:0},
+  {f:"RESERVATORIO",cod:"ER8075",d:"ReservatÃ³rio OTR 75cc",rs:7,sc:0,sp:2,pr:3,ba:0},
+  {f:"RESERVATORIO",cod:"ER8125",d:"ReservatÃ³rio OTR 125cc",rs:15,sc:0,sp:2,pr:3,ba:0},
   {f:"UROLIFT",cod:"UL400-AM",d:"System Implante UrolÃ³gico",rs:0,sc:24,sp:1,pr:14,ba:4}
 ];
 
